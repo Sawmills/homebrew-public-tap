@@ -34,7 +34,7 @@ jobs:
             echo "::endgroup::"
 
             echo "::group::Install ${name}"
-            brew install --build-from-source "./${formula}"
+            brew install "./${formula}"
             echo "::endgroup::"
 
             if [ "${name}" = "sm" ]; then
