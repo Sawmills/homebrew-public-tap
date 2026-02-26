@@ -37,6 +37,12 @@ jobs:
             brew install --build-from-source "./${formula}"
             echo "::endgroup::"
 
+            if [ "${name}" = "sm" ]; then
+              echo "::group::Smoke ${name}"
+              "$(brew --prefix)/bin/${name}" --version
+              echo "::endgroup::"
+            fi
+
             echo "::group::Test ${name}"
             brew test "${name}"
             echo "::endgroup::"
