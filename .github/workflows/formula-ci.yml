@@ -1,0 +1,49 @@
+name: Formula CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  formula-ci:
+    name: formula-ci
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate formulae
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s nullglob
+          formulae=(Formula/*.rb)
+
+          if [ ${#formulae[@]} -eq 0 ]; then
+            echo "No formulae found; nothing to validate"
+            exit 0
+          fi
+
+          brew update-reset
+
+          for formula in "${formulae[@]}"; do
+            name="$(basename "${formula}" .rb)"
+            echo "::group::Audit ${name}"
+            brew audit --strict "${formula}"
+            echo "::endgroup::"
+
+            echo "::group::Install ${name}"
+            brew install "./${formula}"
+            echo "::endgroup::"
+
+            if [ "${name}" = "sm" ]; then
+              echo "::group::Smoke ${name}"
+              "$(brew --prefix)/bin/${name}" --version
+              echo "::endgroup::"
+            fi
+
+            echo "::group::Test ${name}"
+            brew test "${name}"
+            echo "::endgroup::"
+          done
