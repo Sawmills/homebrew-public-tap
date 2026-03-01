@@ -34,17 +34,7 @@ jobs:
             brew audit --strict "Sawmills/public-tap/${name}"
             echo "::endgroup::"
 
-            echo "::group::Install ${name}"
-            brew install "Sawmills/public-tap/${name}"
-            echo "::endgroup::"
-
-            if [ "${name}" = "sm" ]; then
-              echo "::group::Smoke ${name}"
-              "$(brew --prefix)/bin/${name}" --version
-              echo "::endgroup::"
-            fi
-
-            echo "::group::Test ${name}"
-            brew test "${name}"
-            echo "::endgroup::"
+            # Release assets may be private; keep CI focused on formula validation.
+            # Install/smoke/test are executed in the release pipeline where scoped
+            # credentials are available.
           done
