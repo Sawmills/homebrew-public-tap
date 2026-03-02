@@ -1,23 +1,23 @@
 class Sm < Formula
   desc "Sawmills.ai CLI - telemetry cost optimization"
   homepage "https://github.com/Sawmills/sawmills-cli"
-  version "0.2.1"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.1/sm_v0.2.1_Darwin_arm64.tar.gz"
-      sha256 "6cd21542f559b739567be900e50543d2dbf58fd828984daec76818ad2ad67cb8"
+      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.3/sm_v0.2.3_Darwin_arm64.tar.gz"
+      sha256 "193044e639cd8be529ffedbd576591902e9dbd27f22cf0357042e45c8779f98f"
     else
-      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.1/sm_v0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "d755bd0534bae32e3e6cb691f3c2d9b8c4f1162de39946b34e36d5865886371f"
+      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.3/sm_v0.2.3_Darwin_x86_64.tar.gz"
+      sha256 "3cf760d160d3551cff0ee3adabf9ce6b9c324b247d284ec074788300000ea0cf"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.1/sm_v0.2.1_Linux_x86_64.tar.gz"
-      sha256 "f0c23494c68767f20e348515237380e64b3c97fad47f1272d6044d35508e5ac8"
+      url "https://github.com/Sawmills/sawmills-cli/releases/download/v0.2.3/sm_v0.2.3_Linux_x86_64.tar.gz"
+      sha256 "b59941467c67b1c0b886a76ee59374dfa4ae39e345df2081998a85827aff9782"
     end
   end
 
