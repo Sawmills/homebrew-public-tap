@@ -15,10 +15,10 @@ class SawmillsCsvcheck < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v1.795.0/sawmills-csvcheck_v1.795.0_Linux_x86_64.tar.gz"
-      sha256 "e6022a08b84712a599db87dc9178d61f90dc96896b1239cca88c7aa081c2c062"
-    end
+    depends_on arch: :x86_64
+
+    url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v1.795.0/sawmills-csvcheck_v1.795.0_Linux_x86_64.tar.gz"
+    sha256 "e6022a08b84712a599db87dc9178d61f90dc96896b1239cca88c7aa081c2c062"
   end
 
   def install
