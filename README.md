@@ -5,26 +5,26 @@ Public Homebrew formulae for Sawmills tools.
 ## Tap
 
 ```bash
-brew tap sawmills/public-tap https://github.com/Sawmills/homebrew-public-tap
+brew tap sawmills/tap
 ```
 
 ## Install
 
 ```bash
-brew install sawmills/public-tap/sm
+brew install sawmills/tap/sm
 ```
 
 ## Upgrade
 
 ```bash
 brew update
-brew upgrade sawmills/public-tap/sm
+brew upgrade sawmills/tap/sm
 ```
 
 ## CSV validation tool
 
 ```bash
-brew install sawmills/public-tap/sawmills-csvcheck
+brew install sawmills/tap/sawmills-csvcheck
 sawmills-csvcheck -file ./service_teams.csv -lookup-key <CSV_HEADER_NAME>
 ```
 
@@ -37,7 +37,7 @@ Notes:
 
 - `Formula CI` runs on every pull request and push to `main`.
 - `Weekly Public Install Smoke` runs weekly and validates public install:
-  - `brew tap sawmills/public-tap`
-  - `brew install sawmills/public-tap/sm`
+  - `brew tap sawmills/tap`
+  - `brew install sawmills/tap/sm`
   - `sm --version`
 - Smoke failures open or update a GitHub issue for triage.

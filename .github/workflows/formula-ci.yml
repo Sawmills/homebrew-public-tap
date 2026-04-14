@@ -26,12 +26,12 @@ jobs:
           fi
 
           brew update-reset
-          brew tap Sawmills/public-tap "file://${PWD}"
+          brew tap Sawmills/tap "file://${PWD}"
 
           for formula in "${formulae[@]}"; do
             name="$(basename "${formula}" .rb)"
             echo "::group::Audit ${name}"
-            brew audit --strict "Sawmills/public-tap/${name}"
+            brew audit --strict "Sawmills/tap/${name}"
             echo "::endgroup::"
 
             # Release assets may be private; keep CI focused on formula validation.

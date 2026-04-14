@@ -19,15 +19,15 @@ jobs:
           set -euo pipefail
 
           brew update
-          brew untap sawmills/public-tap >/dev/null 2>&1 || true
-          brew tap sawmills/public-tap https://github.com/Sawmills/homebrew-public-tap
+          brew untap sawmills/tap >/dev/null 2>&1 || true
+          brew tap sawmills/tap https://github.com/Sawmills/homebrew-tap
 
           brew uninstall --force sm >/dev/null 2>&1 || true
-          brew install sawmills/public-tap/sm
+          brew install sawmills/tap/sm
           sm --version
 
           brew uninstall --force sawmills-csvcheck >/dev/null 2>&1 || true
-          brew install sawmills/public-tap/sawmills-csvcheck
+          brew install sawmills/tap/sawmills-csvcheck
           sawmills-csvcheck -version
 
   alert-on-failure:
