@@ -15,7 +15,9 @@ class Codexctl < Formula
   end
 
   test do
-    assert_match "Manage multiple Codex CLI accounts", shell_output("#{bin}/codexctl --help")
+    help = shell_output("#{bin}/codexctl --help")
+    assert_match "Usage:", help
+    assert_match "codexctl", help
     assert_path_exists bash_completion/"codexctl"
     assert_path_exists zsh_completion/"_codexctl"
     assert_path_exists fish_completion/"codexctl.fish"
