@@ -1,23 +1,23 @@
 class Claudectl < Formula
   desc "Manage multiple Claude Code accounts"
   homepage "https://github.com/Sawmills/claudectl"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.0/claudectl_v0.1.0_Darwin_arm64.tar.gz"
-      sha256 "8fb65c41ff8c3bcd1f8dd69c2f9c4814d1f7bd4e15d96cc32c7cf03b4f0effd5"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.1/claudectl_v0.1.1_Darwin_arm64.tar.gz"
+      sha256 "18f545c766a92b5e7e908bf12a35d21bb153b4ef10e4feffa661957575ba27f7"
     else
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.0/claudectl_v0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "634fdbfd17bb528d644daa4162a291902618c87b8acb9c1dd25d8f91c7311fde"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.1/claudectl_v0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "2da31e4d812b56a2b0982ed512aeede55014e1be207fa15e98f75404b521e943"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.0/claudectl_v0.1.0_Linux_x86_64.tar.gz"
-      sha256 "d01675d59dd9065eaf3dc858e862876dc3fd47e85f274f9a0a515215458579ae"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.1/claudectl_v0.1.1_Linux_x86_64.tar.gz"
+      sha256 "0ac026257f1dfe3dffa4b3ff500c9a78843b3b1e09829b90816fb8dd8a3137fa"
     end
   end
 
