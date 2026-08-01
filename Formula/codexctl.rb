@@ -1,23 +1,23 @@
 class Codexctl < Formula
   desc "Manage multiple OpenAI Codex CLI accounts"
   homepage "https://github.com/Sawmills/codexctl"
-  version "0.1.16"
+  version "0.1.17"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.16/codexctl_v0.1.16_Darwin_arm64.tar.gz"
-      sha256 "aa0018fde1dba8ce0f9ba04a8a32f6ae1d48877d58353876450f608d0315e628"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.17/codexctl_v0.1.17_Darwin_arm64.tar.gz"
+      sha256 "4845ca88cf0c1a0d8585970000242920a343177183cc8c9ba1f19a8a5443631d"
     else
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.16/codexctl_v0.1.16_Darwin_x86_64.tar.gz"
-      sha256 "e6105a02f9be4d1d111f08097f45db9e61c9407116c4285ff775cb9e660f9fad"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.17/codexctl_v0.1.17_Darwin_x86_64.tar.gz"
+      sha256 "ee87cda754747f015da916c3f79cea82f97b6518e298928da52bd426bfb3fd89"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.16/codexctl_v0.1.16_Linux_x86_64.tar.gz"
-      sha256 "162c50d9f43df2276dd939011cfec4852f909987f8c13ed4b8ddf26f2a855394"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.17/codexctl_v0.1.17_Linux_x86_64.tar.gz"
+      sha256 "e0c44b3fdce2634614a6a2261d302b695a26f971df4289bf8ae8ffc50aa14c18"
     end
   end
 
