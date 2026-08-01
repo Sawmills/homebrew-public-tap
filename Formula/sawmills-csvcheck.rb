@@ -1,7 +1,6 @@
 class SawmillsCsvcheck < Formula
   desc "Validate CSV files against Sawmills CSV enrichment processor rules"
   homepage "https://github.com/Sawmills/sawmills-collector/tree/main/processor/csvenrichmentprocessor"
-  version "1.795.0"
   license :cannot_represent
 
   on_macos do

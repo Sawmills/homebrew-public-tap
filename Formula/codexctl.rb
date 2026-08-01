@@ -1,7 +1,6 @@
 class Codexctl < Formula
   desc "Manage multiple OpenAI Codex CLI accounts"
   homepage "https://github.com/Sawmills/codexctl"
-  version "0.1.17"
   license "Apache-2.0"
 
   on_macos do
